@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 # Open data file
 infile = open("../data/data1.txt", "r")  # ".." means "go up one directory"
 

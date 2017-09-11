@@ -8,20 +8,25 @@ Created on Mon Sep 11 11:48:02 2017
 import numpy as np
 import pylab
 
-infile = open("../data/xy.dat", "r")
+xy_dat = open("../data/xy.dat", "r")
 
-xlist = []
-ylist = []
+x = []
+y = []
 
-for line in infile:
+for line in xy_dat:
+    # xy = tuple(map(float, line.split()))
+    # x.append(xy[0])
+    # y.append(xy[1])
+    
     xi, yi = line.split()
-    xlist.append(float(xi))
-    ylist.append(float(yi))
+    x.append(float(xi))
+    y.append(float(yi))
   
-x = np.array(xlist)
-y = np.array(ylist)
+x = np.array(x)
+y = np.array(y)
 
 pylab.plot(x,y)
+pylab.show()
 
 print("max(xy) = {}, min(y) = {}.".format(max(y), min(y)))
     
